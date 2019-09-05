@@ -1,0 +1,335 @@
+---
+layout: default
+---
+
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <style>
+      #ccontent {
+        border-collapse: collapse;
+        width: 90%;
+      }
+      #mcontent {
+        border-collapse: collapse;
+        width: 90%;
+      }
+      .collapsible {
+        background-color: #5386D2;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 90%;
+        border-style: solid;
+        border-color: white;
+        border-width: 2px 2px 2px 2px;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+
+      .collapsible:hover {
+        background-color: #FFCD00;
+        color:black;
+      }
+
+      .ccontent {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+        width: 84%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--header>
+      <h1>{{ site.title | default: site.github.repository_name }}</h1>
+      <p>{{ site.description | default: site.github.project_tagline }}</p>
+    </header-->
+
+    <div id="banner">
+      <span id="logo"></span>
+    </div><!-- end banner -->
+
+   <div class="wrapper">
+     <h1> Group Device Development</h1>
+
+     <div id="mcontent">
+        <p>
+          You will have 4 lab periods to work on your group task preparing
+          a portion of the full portable dosimeter and environmental sensor
+          device. Groups of two will work on each component. We will spend a
+          portion of the first lab session introducing the different components
+          and getting things set up.
+        </p>
+
+        <p>
+          At the start of each of the following 3 lab sessions some
+          groups will give a brief (5 minute) presentation describing their
+          project, and their plan for how to complete the project. For projects
+          involving data acquisition, this will include a description of how
+          the sensor outputs signal and how the signal from that sensor is
+          received by the raspberry pi. For projects involving calibration,
+          this should include a description of how the sensor works (performs
+          the relevant measurement) and what types of systematic effects will
+          be associated with that method.
+        </p>
+
+        <p>
+          Each group will be responsible for completing the following tasks,
+          along with the main goal of their project:
+          <ul>
+            <li> Make README files and user interface (command-line interface) for
+              running your software.</li>
+            <li> Format a text printout for any results/data (with color
+              coding for different message types, etc.) and implement data
+              logging - this applies to data acquisition and calibration
+              tools. </li>
+          </ul>
+        </p>
+
+       <p>
+          There will be no additional homework assigned during this time, but
+          you will be expected to have completed your task to the best of
+          your abilities by the Oct. 30th lab section. During that lab section,
+          groups will share their completed task for testing by the other
+          groups, give and receive feedback, and incorporate any necessary
+          changes. Once all tasks are completed and fully tested, groups will
+          work separately to integrate their work with the other components to
+          get a fully functioning data acquisition, display, and logging
+          software package, with appropriate calibration and uncertainties for
+          each sensor. They will then fully assemble their personal devices and
+          test the full software package with their own devices.
+        </p>
+      </div>
+
+      <h2> Group Tasks </h2>
+      <button class="collapsible">GPS Readout:</button>
+      <div class="ccontent">
+        <ul>
+          <li>Follow the
+            <a href="https://learn.adafruit.com/adafruit-ultimate-gps-on-the-raspberry-pi/introduction"> setup instructions</a>
+            to get started.</li>
+          <li>Grab data from the sensor and implement text printout of data and
+            data logging</li>
+          <li>Implement method for sending data to rabbitmq queue for
+            display</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">Pressure/Temperature/Humidity (weather) sensor readout:</button>
+      <div class="ccontent">
+        <ul>
+          <li>Basic info for the
+              <a href="https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/downloads">
+              BME280 Humidity + Pressure + Temperature breakout</a></li>
+          <li>Use the <a href="https://cdn-shop.adafruit.com/datasheets/BST-BME280_DS001-10.pdf">data sheet</a>
+              to study how the sensor works and understand the limitations</li>
+          <li>Use the <a href="https://github.com/adafruit/Adafruit_Python_BME280">Adafruit readout driver</a>
+              - update to run on Python 3 if necessary</li>
+          <li>Format text printout of data readings and implement data
+            logging</li>
+          <li>Implement method for sending data to rabbitmq queue for
+            display</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">ADC (Analog-to-Digital Converter)
+        readout:</button>
+      <div class="ccontent">
+        <ul>
+          <li>Checkout the <a href="https://cdn-shop.adafruit.com/datasheets/MCP3008.pdf">data sheet</a>
+            for the chip - we will be using the MCP3008 SOIC form factor,
+            connected to the Raspberry Pi 3.3V for the reference voltage.</li>
+          <li>You can use the archived library: <a href="https://github.com/adafruit/Adafruit_Python_MCP3008">
+            Adafruit_Python_MCP3008</a></li>
+          <li>You should look into using the new supported library:
+            <a href="https://github.com/adafruit/Adafruit_CircuitPython_MCP3xxx">
+              Adafruit_CircuitPython_MCP3xxx</a></li>
+          <li>Determine the conversion for CO2 ppm value and the ADC
+            digital value following the
+            <a href="https://wiki.dfrobot.com/Gravity__Analog_Infrared_CO2_Sensor_For_Arduino_SKU__SEN0219">
+              specifications for the CO2 sensor</a>.</li>
+          <li>Implement method for sending data to rabbitmq queue for
+            display</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">Air Quality sensor readout:</button>
+      <div class="ccontent">
+        <ul>
+          <li>Look at the <a href="https://wiki.dfrobot.com/PM2.5_laser_dust_sensor_SKU_SEN0177">manufacturer information</a>
+            for how this sensor works, including example code (for the Arduino,
+            in C++)</li>
+          <li>We will provide an example driver for data readout if needed.</li>
+          <li>Implement method for sending data to rabbitmq queue for
+            display.</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">Silicon radiation sensor readout:</button>
+      <div class="ccontent">
+        <ul>
+          <li>Use the <a href="https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/">RPi.GPIO</a>
+            Python module for accessing signal from the
+            <a href="http://www.radiation-watch.org/p/pocketgeiger.html">
+              Pocket Geiger</a> sensor.</li>
+          <li>Format text printout of data readings and implement data
+            logging.</li>
+          <li>Implement method for sending data to rabbitmq queue for
+            display.</li>
+          <li>Extra credit: use the same readout system to catch/process
+            the noise signal for microphonic (vibrational) noise rejection.</li>
+          <ul>
+            <li>The challenge here is the pulse shape and the way the signal
+              event handling works for this library</li>
+          </ul>
+        </ul>
+      </div>
+
+      <button class="collapsible">Silicon radiation sensor calibration and
+        systematic uncertainties:</button>
+      <div class="ccontent">
+        <ul>
+          <li>Follow the basic <a href="https://radwatch.berkeley.edu/dosenet/calibrations">calibration procedure</a>
+            used for the DoseNet.
+          <li>Use data logging and automation (software) to extract the
+            calibration</li>
+          <li>Compare multiple sensors in the same location to verify
+            calibration results and estimate systematic uncertainties.</li>
+          <li>Plot comparisons and sample data showing the final systematic
+            uncertainties</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">CO<sub>2</sub> sensor calibration and
+        systematic uncertainties:</button>
+      <div class="ccontent">
+        <ul>
+          <li>Calibrate (check) single sensor against full set of portable
+            devices or pre-calibrated sensor.</li>
+          <li>Compare multiple CO2 sensors in the same conditions (multiple
+            times) to estimate systematic uncertainties.</li>
+          <li>Plot comparisons and sample data showing the final systematic
+            uncertainties</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">Weather sensor calibration and
+        systematic uncertainties:</button>
+      <div class="ccontent">
+        <ul>
+          <li>Compare with weather underground station on the Etcheverry roof,
+            placing your sensor in the same general area with similar sun
+            exposure.</li>
+          <li>Compare multiple sensors in the same location.</li>
+          <li>Plot comparisons and sample data showing the final systematic
+            uncertainties.</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">Air Quality calibration and systematic
+        uncertainties:</button>
+      <div class="ccontent">
+        <ul>
+          <li>Compare with near-by <a href="https://www.purpleair.com/map#14/37.86891/-122.26851">PurpleAir</a>
+            stations (must convert to AQI first).</li>
+          <li>Compare data from multiple sensors in the same location.</li>
+          <li>Plot comparisons and sample data showing the final systematic
+            uncertainties.</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">Graphical User Interface (GUI) for
+        data control and display:</button>
+      <div class="ccontent">
+        <ul>
+          <li>Create a GUI for showing current readings for each sensor on the
+            device.</li>
+          <li>Get data from sensors using the rabbitmq</li>
+          <li>Include the ability to switch between sensors and turn on/off data
+            logging</li>
+          <li>Show the location, etc. For example, always show some types of
+            data in smaller font and selected data in large font in the center
+            of the screen.</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">PCB design for circuit board connecting
+        sensors to the RPi GPIO pins:</button>
+      <div class="ccontent">
+        <ul>
+          <li>Using <a href="https://www.autodesk.com/products/eagle/overview">Eagle</a>,
+            which you can download for free through campus by creating an
+            Autodesk account using your Berkeley credentials.
+          <li>We have a <a href="https://github.com/bearing/dosenet-print/tree/master/PCB_Hat">library</a>
+            of basic elements to get you started.</li>
+          <li>You will be expected to modify/improve/personalize the design for
+            credit, we will help you order the board from a printing service
+            once you are ready.</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">3D case design:</button>
+      <div class="ccontent">
+        <ul>
+          <li>Using <a href="https://www.autodesk.com/products/inventor/overview#">Autodesk Inventor</a>
+            is recommended, although this software only runs on the Windows 64-
+            bit OS. There are alternatives, including open source options like
+            Blender, but Inventor is the most intuitive. We will have a laptop
+            with Inventor installed available if needed.</li>
+          <li>Design an enclosure for your Raspberry Pi system, including
+            screen, circuit board, and any sensors or other components you want
+            housed inside the enclosure. We have example case designs in our
+            <a href="https://github.com/bearing/dosenet-print">print design git
+              repo</a>.</li>
+          <li>Your design should be, at the very least, a modification/
+            improvement/personalization of an existing design to receive
+            credit. Prints can be done through Jacobs Hall, there is a training
+            you will need to complete to get access to those printers.</li>
+        </ul>
+      </div>
+
+    </div>
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+    {% if site.google_analytics %}
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+      </script>
+    {% endif %}
+
+  </body>
+</html>

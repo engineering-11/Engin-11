@@ -1,0 +1,467 @@
+---
+layout: default
+---
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <style>
+      #ccontent {
+        border-collapse: collapse;
+        width: 90%;
+      }
+      #mcontent {
+        width: 90%;
+      }
+      .collapsible {
+        background-color: #5386D2;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        width: 90%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+      .empty {
+        border-style: solid;
+        border-color: transparent;
+        width: 90%;
+        border-width: 2px 2px 13px 2px;
+      }
+      .collapsible:hover {
+        background-color: #FFCD00;
+        color:black;
+      }
+      .ccontent {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+        width: 84%;
+      }
+      p.thick {
+        font-weight: bold;
+      }
+      p.thick_plus {
+        font-weight: bold;
+        font-size: 150%;
+      }
+      p.sub {
+        width: 90%;
+      }
+      ul.sub {
+        width: 90%;
+      }
+      li.thick {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+      <!--header>
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+      </header-->
+
+    <div id="banner">
+      <span id="logo"></span>
+    </div><!-- end banner -->
+
+    <div class="wrapper">
+
+      <h1> Welcome to Engineering 11 </h1>
+
+      <!--div id="mcontent">
+        <p class="thick_plus">
+          A Hands-on Introduction to Radiation Detection:
+          Getting to Know our Radioactive World
+        </p>
+      </div-->
+
+      <p class="sub">
+        This course is an introduction to basic concepts in radiation detection
+        and radioactivity, electrical circuits, and data analytics. Lectures
+        provide the theoretical foundation of the work being performed in the
+        accompanying laboratory. The course will contain three sections:
+        introduction to how radiation interacts with matter and radiation
+        detection technologies; development of the tools (mathematical and
+        computational) needed for analyzing various types of radiation and
+        environmental data; and building of a basic radiation sensor system.
+      </p>
+
+      <h2> Course Syllabus </h2>
+
+      <button class="collapsible"> Fall 2019 </button>
+      <div class="ccontent">
+        <table id="syllabus">
+          <tr>
+            <th width="13%" > Date </th>
+            <th width="7%"> Week </th>
+            <th width="40%"> Lecture Topic </th>
+            <th width="40%"> Lab/HW </th>
+          </tr>
+          <tr><td align="center"> Aug. 28-30 </td>
+            <td align="center"> 1 </td>
+            <td> <i>No class</i> </td>
+            <td> <a href="https://drive.google.com/open?id=1nktF_yr2JKHGucuePsx-eJ-SRJRylOcpeeh7UjDLIzI">Intro Survey (required)</a></td>
+          </tr>
+          <tr><td align="center"> Sept. 3-6 </td>
+            <td align="center"> 2 </td>
+            <td> Introduction: getting to know our radioactive world
+              <ul>
+                <li>Radiation around us: natural and man-made sources </li>
+                <li>Applications of radiation </li>
+              </ul>
+              Reading:
+              <ul>
+                <li> <a href="https://github.com/alihanks/E11/wiki/Software-Overview">
+                  Course Wiki: Software Overview </a></li>
+                <li> <a href="https://github.com/alihanks/E11/wiki/Using-Python-and-Jupyter">
+                  Course Wiki: Using Python and Jupyter </a></li>
+              </ul>
+              <a href="https://forms.gle/12763zjzoJQSdW1Z7">Coding Survey (required)</a>
+            </td>
+            <td> Introdution to programming
+              <ul>
+                <li><b>Pre-lab HW</b> <a href="https://github.com/alihanks/E11/wiki/Software-Installation"> Install software </a> </li>
+                <li> Programming in Python </li>
+                <li> Jupyter Notebooks </li>
+                <li> <a href="https://github.com/engineering-11/Engin-11/blob/master/Lessons/Introduction%20to%20Python.ipynb"> Lecture Notes </a></li>
+                <li> <b> HW: </b> Complete <a href="https://github.com/engineering-11/Activities/blob/master/Lab%201%20Activity.ipynb">Lab Activity 1</a>
+              </ul>
+            </td>
+          </tr>
+          <tr><td align="center"> Sept. 9-13 </td>
+            <td align="center"> 3 </td>
+            <td> Getting to know our radioactive world part 2
+              <ul>
+                <li>Activity and specific activity </li>
+                <li>Types of radioactive decay, decay chains </li>
+              </ul>
+            </td>
+            <td> Introduction to programming cont'd
+              <ul>
+                <li> <a href="https://github.com/alihanks/E11/wiki/Command-line-tools">
+                  Using the command-line </a></li>
+                <li> <a href="https://github.com/alihanks/E11/wiki/Version-Control-with-Git">
+                  Version control with Git </a></li>
+              </ul>
+            </td>
+          <tr><td align="center"> Sept.  16-20 </td>
+            <td align="center"> 4 </td>
+            <td> Statistics and modeling
+              <ul>
+                <li>Stochastic processes </li>
+                <li>Counting statistics </li>
+              </ul>
+            </td>
+            <td> Poisson/gaussian uncertainties
+              <ul> <li>T-test analysis </li></ul>
+            </td>
+          </tr>
+          <tr><td align="center"> Sept.  23-27 </td>
+            <td align="center"> 5 </td>
+            <td> Statistics cont'd
+              <ul>
+                <li>Regression, modeling, confidence testing </li>
+              </ul>
+            </td>
+            <td> Correlations in data
+              <ul><li>linear and non-linear correlations </li></ul>
+            </td>
+          </tr>
+          <tr><td align="center"> Sept. 30- Oct. 4 </td>
+            <td align="center"> 6 </td>
+            <td> Circuitry overview
+              <ul><li>Electric circuits </li></ul>
+            </td>
+            <td> Intro to soldering:
+              <ul>
+                <li> Solder and test circuitry for full sensor system </li>
+                <li> <b> HW:</b> Continue practicing until you have a working
+                  circuit board for your final device.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr><td align="center"> Oct. 7-11 </td>
+            <td align="center"> 7 </td>
+            <td> Signal processing
+              <ul><li> Analog vs digital </li></ul>
+            </td>
+            <td> Sensor integration: groups will work on software development
+              for a task selected from those described
+              <a href="device_project_details.html">here</a>.
+              <ul><li><b>Pre-Lab HW:</b> form groups and work with the
+                instructor to get the guidelines and material for your chosen
+                task.
+              </li></ul>
+            </td>
+          </tr>
+          <tr><td align="center"> Oct. 14-18 </td>
+            <td align="center"> 8 </td>
+            <td> Interactions of radiation with matter
+              <ul>
+                <li> Electromagnetic radiation </li>
+                <li> Electrons and heavy particles </li>
+                <li> Energy transfer/deposition </li>
+              </ul>
+            </td>
+            <td> Each week ~three groups will introduce their task. Group task
+              presentations:
+              <ul>
+                <li> ADC readout </li>
+                <li> ADC calibration </li>
+                <li> Air quality readout </li>
+                <li> Air quality calibration </li>
+              </ul>
+            </td>
+          </tr>
+          <tr><td align="center"> Oct. 21-25 </td>
+            <td align="center"> 9 </td>
+            <td> Radiation detection and instrumentation continued
+              <ul><li> Radiation measurement methods and technologies </li></ul>
+            </td>
+            <td> Group work continued. Group task presentations:
+              <ul>
+                <li> Radiation sensor readout </li>
+                <li> Radiation sensor calibration </li>
+                <li> Weather sensor readout</li>
+                <li> Weather sensor calibration </li>
+              </ul>
+            </td>
+          </tr>
+          <tr><td align="center"> Oct. 26 </td>
+            <td align="center"> 9* </td>
+            <td> <i> Outreach Activity </i></td>
+            <td>
+              <ul>
+                <li> <a href="https://www.northbayscience.org/">
+                  North Bay Discovery Day</a> </li>
+                <li> <a href="http://www.bayareasciencefestival.org/festival/east-bay-discovery-day-3/">
+                  East Bay Discovery Day</a> </li>
+              </ul>
+            </td>
+          </tr>
+          <tr><td align="center"> Oct. 28-Nov. 1 </td>
+            <td align="center"> 10 </td>
+            <td> Radiation detection and instrumentation
+              <ul>
+                <li> Basic units and quantities </li>
+                <li> Exposure and dose </li>
+              </ul>
+            </td>
+            <td> Group work continued. Group task presentations:
+              <ul>
+                <li> GPS readout </li>
+                <li> Data control/display interface </li>
+                <li> Testing and feedback of each component</li>
+              </ul>
+            </td>
+          </tr>
+          <tr><td align="center"> Nov. 2 </td>
+            <td align="center"> 10* </td>
+            <td> <i> Outreach Activity </i></td>
+            <td> <a href="http://www.bayareasciencefestival.org/festival/discovery-days-at-oracle-park/">
+              Discovery Day at Oracle Park</a> </td>
+          </tr>
+          <tr><td align="center"> Nov. 4-8 </td>
+            <td align="center"> 11 </td>
+            <td> Building sensor systems an networks </td>
+            <td> Complete group tasks. Assemble and test final personal
+              devices.
+            </td>
+          </tr>
+          <tr><td align="center"> Nov. 12-15 </td>
+            <td align="center"> 12 </td>
+            <td> Lab tours with search and identification of small hidden
+              radiation sources using your devices. </td>
+              <td> Group project: measuring and analyzing radiation in the
+                environment </td>
+          </tr>
+          <tr><td align="center"> Nov. 18-22 </td>
+            <td align="center"> 13 </td>
+            <td> LBNL field trip </td>
+            <td> Group project work </td>
+          </tr>
+          <tr><td align="center"> Nov. 25-29 </td>
+            <td align="center"> 14 </td>
+            <td> Lab tours continued </td>
+            <td><i>Thanksgiving week</i></td>
+          </tr>
+          <tr><td align="center"> Dec. 2-6 </td>
+            <td align="center"> 15 </td>
+            <td> Group project presentations
+              <ul><li>Each group will have 15 min for presentations.
+              </li></ul>
+            </td>
+            <td>  Final report preparation </td>
+          </tr>
+          <tr><td align="center"> Dec. 9-13 </td>
+            <td align="center"> 16 </td>
+            <td> Group project presentations </td>
+            <td> </td>
+          </tr>
+          <tr><td align="center"> Dec. 18 </td>
+            <td align="center"> </td>
+            <td> Final reports due </td>
+            <td> </td>
+          </tr>
+        </table>
+      </div>
+
+      &nbsp;
+      <div class="empty"></div>
+      &nbsp;
+
+      <h3> <a href="device_project_details.html">
+        Device Development Task Details </a></h3>
+      <p class="sub">
+        Students will work in groups of two to develop a portion of the sensor
+        data acquisition or calibration. These tasks will require a full
+        understanding of how the chosen sensor works and interfaces with the
+        raspberry pi computer. Each group will have several weeks to complete
+        and test their component and share their work with other groups for
+        interface feedback, ultimately integrating their work with work from
+        other groups to make a fully functioning final device with final
+        project ready data acquisition systems.
+      </p>
+
+      <h3> <a href="final_project_details.html">
+        Final Group Project Details </a></h3>
+      <p class="sub">
+        Students will work in groups of two or three (this can be the same
+        group chosen for your development tasks) to come up with a research
+        project using data collected with their portable radiation and
+        environmental sensor devices, or collected through the larger sensor
+        network these devices are modeled after, to explore a questions related
+        to radiation in our environment.
+      </p>
+
+      <h2> Class Schedule </h2>
+      <h4> <font size="+1">Lecture</font> </h4>
+      <ul>
+        <li class="thick"> Tuesdays: 9:30 - 11:00 AM </li>
+        <li class="thick"> Evans Hall, Room 41 </li>
+      </ul>
+
+      <h4> <font size="+1">Laboratory</font> </h4>
+      <ul>
+        <li class="thick"> Wednesdays: 2:00 - 4:00 PM </li>
+        <li class="thick"> Life Sciences, Room 2062 </li>
+      </ul>
+
+      <h4> <font size="+1">Office Hours</font> </h4>
+      <h4> Q&A and content review </h4>
+      <ul>
+        <li class="thick"> Wednesdays: 10:00 AM - 12:00 PM </li>
+        <li class="thick"> Etcheverry Hall, Room 4159 </li>
+      </ul>
+
+      <h4> Extra Lab time </h4>
+      <ul>
+        <li class="thick"> Thursdays: 10:00 AM - 12:00 PM </li>
+        <li class="thick"> Etcheverry Hall, Room 1110C </li>
+      </ul>
+
+      <div id="mcontent">
+        <h2> Textbook References </h2>
+        <ul>
+          <li> Robert S. Witte, John S. Witte, “Statistics”, 11th Edition,
+            2016, ISBN: 978-1-119-25451-5 </li>
+          <li> Mahmood Nahvi and Joseph A. Edminister,
+            <a href="https://www.accessengineeringlibrary.com/browse/schaums-outline-of-electric-circuits-seventh-edition">
+              “Schaum's Outline of Electric Circuits”, 7th ed.</a></li>
+          <li> G.F. Knoll, "Radiation Detection and Measurement,"
+            4th Edition, 2010, ISBN: 978-0-470-13148-0 </li>
+          <li> Anthony Scopatz, Kathryn Huff, “Effective Computation
+            in Physics: Field Guide to Research with Python”, 2015 </li>
+        </ul>
+      </div>
+
+      <h2> Grading Method </h2>
+
+      <p class="sub">
+        The course grade will be based on homework (20%), lab participation
+        (20%), a final project and group presentation (40%), and a final
+        written report (20%).
+      </p>
+
+      <p class="sub">
+        Lab participation will include interactive programming work carried out
+        during the first couple of weeks which will contribute to your
+        homework grade for those weeks. If you are not present for the lab
+        sections during these activities, or have not completed the necessary
+        preparation indicated in the syllabus, you will not be able to make
+        these activities up, unless you have a legitimate reason for missing
+        class.
+
+      <p class="sub">
+        Work related to group device development projects will make up the
+        majority of the homework grade (70%), including the project related
+        presentations made during the lab sessions. Viewer feedback on
+        presentations and project results will contribute to your lab
+        participation grade. A portion of the final project presentation
+        grade will come from your feedback on other presentations.
+      </p>
+
+      <h2> Course Materials </h2>
+
+      <p class="sub">
+        There is a significant amount of programming involved in this course.
+        For this reason, access to a personal laptop that you can bring to
+        class will greatly aid in your progress. That said, if you do not have
+        access to a personal computer, we can make arrangements to provide you
+        with a Raspberry Pi for use during class. Please <bold>contact the
+          instructor prior to the start of the term</bold> if you will not have
+        access to a personal computer during class.
+      </p>
+
+      <p class="sub">
+        All other required materials, including electronics and soldering
+        tools, sensor equipment, and any related supplied needed, will be
+        provided in class. You will have the choice to keep the radiation and
+        environmental sensor devices you build in class or to donate them to
+        the <a href="https://radwatch.berkeley.edu/dosenet/map">DoseNet</a>
+        program for installation in a school, including one of your choosing.
+      </p class="sub">
+    </div>
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+    {% if site.google_analytics %}
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+      </script>
+    {% endif %}
+</body>
+</html>
