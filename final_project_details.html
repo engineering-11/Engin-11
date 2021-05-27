@@ -92,67 +92,215 @@ layout: default
         </p>
       </div>
       <h2> Final Project Suggestions </h2>
-      <div id="mcontent">
-        <ul>
-          <li> <h3> Radiation Mapping </h3>
-            <ol>
-              <li> Mapping and identifying sources of background radiation
-                   around campus. Which areas of campus have higher/lower
-                   background levels and which sources are contributing to
-                   those levels? </li>
-              <li> Map out radiation levels in Etcheverry Hall, or other
-                   buildings on campus, and determine potential causes for any
-                   observed significant variation. </li>
-            </ol>
-          </li>
-          &nbsp;
 
-          <li> <h3> Identifying Sources </h3>
-            Identifying the isotopes present and determining the activity of
-            unknown sources of radiation. We will supply the sources and ask
+      <button class="collapsible">Radiation Mapping</button>
+      <div class="ccontent">
+        <ul>
+          <li> Mapping and identifying sources of background radiation
+               around campus. Which areas of campus have higher/lower
+               background levels and which sources are contributing to
+               those levels? </li>
+          <li> Map out radiation levels in Etcheverry Hall, or other
+               buildings on campus, and determine potential causes for any
+               observed significant variation. </li>
+        </ul>
+      </div>
+
+      &nbsp;
+
+      <button class="collapsible">Identifying Sources</button>
+      <div class="ccontent">
+        Identifying the isotopes present and determining the activity of
+        unknown sources of radiation. 
+        <ul>
+          <li>
+            We will supply the sources and ask
             you to determine what radioactive materials it contains and at what
             rate they are producing radiation - the activity.
-          </li>
-          &nbsp;
-
-          <li> <h3> Contextualizing Radiation </h3>
-            Exploring environmental factors leading to variations in local
-            background radiation rates. This project can in two directions,
-            each of which could be done by different teams. The options are:
-            <ol>
-              <li> Explore large-scale environmental factors using data
-                from our radiation sensor network. Are there weather effects
-                or other factors (air quality) that correlate with radiation
-                levels? </li>
-              <li> Explore more localized effects using your portable devices
-                - with our portable spectrometers - combining radiation and
-                environmental sensor data. Are there correlations between
-                CO<sub>2</sub>, etc. and radiation levels locally? What could
-                be the explanation for this?</li>
-            </ol>
-          </li>
-          &nbsp;
-
-          <li> <h3> Understanding Dose-rate </h3>
-            Explore the energy dependence of dose-rate. We calibrate our
-            dosimeters using sources that roughly mimic the spectral composition
-            we find naturally - is this sufficient? What systematics does this
-            introduce to our dose-rate estimate? Could we improve this with a
-            different calibration procedure?
-          </li>
-          &nbsp;
-
-          <li> <h3> Adding Sensors </h3>
-            Integrate new sensors, such as altimeters, magnetometers, etc. This
-            would be an extension of the work done to integrate the base set of
-            sensors our systems use. However, these sensors have not been used
-            in our systems before, so this project would require new software
-            for readout modifications to the electronics boards for interfacing
-            with the Raspberry Pi for final integration into the full system.
           </li>
         </ul>
       </div>
 
+      &nbsp;
+
+      <button class="collapsible">Contextualizing Radiation</button>
+      <div class="ccontent">
+        Exploring environmental factors leading to variations in local
+        background radiation rates. This project can go in two directions,
+        each of which could be done by different teams. The options are:
+        <ul>
+          <li> Explore large-scale environmental factors using data
+            from our radiation sensor network. Are there weather effects
+            or other factors (temperature, etc.) that correlate with radiation
+            levels? </li>
+          <li> Explore more localized effects using your portable devices
+            - with our portable spectrometers - combining radiation and
+            environmental sensor data. Are there correlations between
+            air quality, etc. and radiation levels locally? What could
+            be the explanation for this?</li>
+        </ul>
+      </div>
+          &nbsp;
+
+      <button class="collapsible">Radiation Sensor Calibration</button>
+      <div class="ccontent">
+        A radiation detector requires calibration if it is to be used to provide
+        a measure of the absolute radiation levels or dose, rather than basic
+        counts and relative changes in radiation levels. Working within the limitations 
+        of the materials you will have access to, come up with a calibration procedure to 
+        determine how the counts registered in your radiation sensor relate to true radiation 
+        rates from sources. 
+        <ul>
+          <li> Fully establish your systematic uncertainties related to this calibration
+            procedure and test your procedure with known sources. </li>
+          <li> NOTE: We will provide guidance and any necessary materials, such as additional
+            radiation detectors that are already calibrated, calibration sources, etc. </li>
+        </ul>
+      </div>
+
+      <button class="collapsible">Understanding Dose-rate</button>
+      <div class="ccontent">
+        Explore the energy dependence of dose-rate.
+        <ul>
+          <li>
+            We calibrate our dosimeters using sources that roughly mimic the 
+            spectral composition we find naturally - is this sufficient? What 
+            systematics does this introduce to our dose-rate estimate? Could we 
+            improve this with a different calibration procedure?
+          </li>
+        </ul>
+      </div>
+      
+      &nbsp;
+
+      <button class="collapsible">Environmental Sensor Calibration</button>
+      <div class="ccontent">
+        The various environmental sensors that have been integrated into your 
+        multi-sensor device may not be acquirate. Come up with a procedure for 
+        verifying the accuracy of one of the environmental sensors. There are 
+        several ways you may approach this - either through lab tests or 
+        comparisons of deployed devices with other sensor networks.
+        <ul>
+          <li> Fully establish your systematic uncertainties related to this calibration
+            procedure and test your procedure with known sources. </li>
+          <li> NOTE: We will provide guidance and pointers to any necessary materials. </li>
+        </ul>
+      </div>
+
+      &nbsp;
+
+      <button class="collapsible"> Adding new Sensors</button>
+      <div class="ccontent">
+        Integrate new sensors, such as altimeters, magnetometers, etc. This
+        would be an extension of the work done to integrate the base set of
+        sensors our systems use.
+          <li>
+            These are new sensors: this project would require new software
+            or readout modifications to the electronics boards for interfacing
+            with the Raspberry Pi for final integration into the full system.
+          </li>
+          <li>
+            As part of this project, you will be expected to come up with an 
+            experiment or set of experiments to varify the performance of the 
+            new sensor and establish the sensitivity, etc.
+          </li>
+        </ul>
+      </div>
+
+      &nbsp;
+
+      <button class="collapsible">Graphical User Interface (GUI)</button>
+      <div class="ccontent">
+        The software developed throughout this semester relies on a command-line
+        interface. Data collection in the field or for non-experts is greatly 
+        facilitated by a graphical interface. Similarly, immediate diplay of the
+        data being recorded can be quite useful.
+        <ul>
+          <li>Create a GUI for starting data collection and showing current readings 
+            for the sensors on your device.</li>
+          <li> NOTE: this is a programming intensive project and should only be 
+            selected by a group with an existing and strong background in software 
+            development. </li>
+        </ul>
+      </div>
+
+      &nbsp;
+
+      <button class="collapsible">PCB design</button>
+      <div class="ccontent">
+        We have a PCB design for the circuit board we use for the interface between our sensors and
+        the Raspberry Pi. This leaves us with a fixed set of inputs available in a fixed configuration, 
+        which may limit options for new sensor inputs, etc. To add new inputs, you would be required to 
+        create a new PCB design that included these new inputs, and possibly modified the existing 
+        configuration to accomodate these updates.
+        <ul>
+          <li>Using <a href="https://www.autodesk.com/products/eagle/overview">Eagle</a>,
+            which you can download for free through campus by creating an
+            Autodesk account using your Berkeley credentials, create a new PCB design.
+          <li>Come up with a potential new input/output (LED controls, etc.) and modify/improve/personalize 
+            the design to incorporate this new feature. </li>
+        </ul>
+      </div>
+
+      &nbsp;
+
+      <button class="collapsible">3D Case Design</button>
+      <div class="ccontent">
+        The existing case for our portable devices were 3D printed from a model developed by several
+        students. There are a range of potential improvements one could imagine developing.
+        <ul>
+          <li>Design an enclosure for your Raspberry Pi system, including
+            screen, circuit board, and any sensors or other components you want
+            housed inside the enclosure. </li>
+          <li>Use <a href="https://www.autodesk.com/products/inventor/overview#">Autodesk Inventor</a>
+            is recommended, although this software only runs on the Windows 64-
+            bit OS. There are alternatives, including open source options like
+            Blender, but Inventor is the most intuitive. We will have a laptop
+            with Inventor installed available if needed.</li>
+          <li>YPrints can be done through Jacobs Hall, there is a training
+            you will need to complete to get access to those printers.</li>
+        </ul>
+      </div>
+
    </div>
+
+<!----
+          <li>We have a <a href="https://github.com/bearing/dosenet-print/tree/master/PCB_Hat">library</a>
+            of basic elements to get you started.</li>
+
+          <li> We have example case designs in our
+            <a href="https://github.com/bearing/dosenet-print">print design git
+              repo</a>. </li>
+----->
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+    {% if site.google_analytics %}
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+      </script>
+    {% endif %}
+
+
   </body>
 </html>

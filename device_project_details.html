@@ -64,71 +64,39 @@ layout: default
     </div><!-- end banner -->
 
    <div class="wrapper">
-     <h1> Group Device Development</h1>
+     <h1> Sensor System Development</h1>
 
      <div id="mcontent">
         <p>
-          You will have 4 lab periods to work on your group task preparing
-          a portion of the full portable dosimeter and environmental sensor
-          device. Groups of two will work on each component. We will spend a
-          portion of the first lab session introducing the different components
-          and getting things set up.
+          During the first several labs, we will work through how to interface
+          with progressively more complex environmental sensors using a Raspberry Pi computer.
+          We will be introduced to several code development concepts through this 
+          process, as well as how to use and develop command-line tools for executing 
+          the software developed on the Raspberry Pi.
+        </p>
+        <p>
+          Following these initial labs, groups will be asked to work independently to 
+          create a similar data acquisition tool for the primary radiation sensor. 
+          Following this, we will work through the full assembly of your sensor systems and 
+          the testing and comparison of each groups data acquisition software.
+          We will then use one lab session to go into the field and collect data using the full 
+          set of sensors interfacing with your portable device.
         </p>
 
         <p>
-          At the start of each of the following 3 lab sessions some
-          groups will give a brief (5 minute) presentation describing their
-          project, and their plan for how to complete the project. For projects
-          involving data acquisition, this will include a description of how
-          the sensor outputs signal and how the signal from that sensor is
-          received by the raspberry pi. For projects involving calibration,
-          this should include a description of how the sensor works (performs
-          the relevant measurement) and what types of systematic effects will
-          be associated with that method.
-        </p>
-
-        <p>
-          Each group will be responsible for completing the following tasks,
-          along with the main goal of their project:
+          As part of this work, each group will be responsible for completing the following tasks,
+          along with the basic data acquisition capabilities:
           <ul>
             <li> Make README files and user interface (command-line interface) for
               running your software.</li>
-            <li> Format a text printout for any results/data (with color
-              coding for different message types, etc.) and implement data
+            <li> Format a text printout for any results/data and implement data
               logging - this applies to data acquisition and calibration
               tools. </li>
           </ul>
         </p>
-
-       <p>
-          There will be no additional homework assigned during this time, but
-          you will be expected to have completed your task to the best of
-          your abilities by the Oct. 30th lab section. During that lab section,
-          groups will share their completed task for testing by the other
-          groups, give and receive feedback, and incorporate any necessary
-          changes. Once all tasks are completed and fully tested, groups will
-          work separately to integrate their work with the other components to
-          get a fully functioning data acquisition, display, and logging
-          software package, with appropriate calibration and uncertainties for
-          each sensor. They will then fully assemble their personal devices and
-          test the full software package with their own devices.
-        </p>
       </div>
 
-      <h2> Group Tasks </h2>
-      <button class="collapsible">GPS Readout:</button>
-      <div class="ccontent">
-        <ul>
-          <li>Follow the
-            <a href="https://learn.adafruit.com/adafruit-ultimate-gps-on-the-raspberry-pi/introduction"> setup instructions</a>
-            to get started.</li>
-          <li>Grab data from the sensor and implement text printout of data and
-            data logging</li>
-          <li>Implement method for sending data to rabbitmq queue for
-            display</li>
-        </ul>
-      </div>
-
+      <h2> Sensors to interface </h2>
       <button class="collapsible">Pressure/Temperature/Humidity (weather) sensor readout:</button>
       <div class="ccontent">
         <ul>
@@ -141,6 +109,19 @@ layout: default
               - update to run on Python 3 if necessary</li>
           <li>Format text printout of data readings and implement data
             logging</li>
+          <li>Implement method for sending data to rabbitmq queue for
+            display</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">GPS Readout:</button>
+      <div class="ccontent">
+        <ul>
+          <li>Follow the
+            <a href="https://learn.adafruit.com/adafruit-ultimate-gps-on-the-raspberry-pi/introduction"> setup instructions</a>
+            to get started.</li>
+          <li>Grab data from the sensor and implement text printout of data and
+            data logging</li>
           <li>Implement method for sending data to rabbitmq queue for
             display</li>
         </ul>
@@ -196,109 +177,6 @@ layout: default
             <li>The challenge here is the pulse shape and the way the signal
               event handling works for this library</li>
           </ul>
-        </ul>
-      </div>
-
-      <button class="collapsible">Silicon radiation sensor calibration and
-        systematic uncertainties:</button>
-      <div class="ccontent">
-        <ul>
-          <li>Follow the basic <a href="https://radwatch.berkeley.edu/dosenet/calibrations">calibration procedure</a>
-            used for the DoseNet.
-          <li>Use data logging and automation (software) to extract the
-            calibration</li>
-          <li>Compare multiple sensors in the same location to verify
-            calibration results and estimate systematic uncertainties.</li>
-          <li>Plot comparisons and sample data showing the final systematic
-            uncertainties</li>
-        </ul>
-      </div>
-
-      <button class="collapsible">CO<sub>2</sub> sensor calibration and
-        systematic uncertainties:</button>
-      <div class="ccontent">
-        <ul>
-          <li>Calibrate (check) single sensor against full set of portable
-            devices or pre-calibrated sensor.</li>
-          <li>Compare multiple CO2 sensors in the same conditions (multiple
-            times) to estimate systematic uncertainties.</li>
-          <li>Plot comparisons and sample data showing the final systematic
-            uncertainties</li>
-        </ul>
-      </div>
-
-      <button class="collapsible">Weather sensor calibration and
-        systematic uncertainties:</button>
-      <div class="ccontent">
-        <ul>
-          <li>Compare with weather underground station on the Etcheverry roof,
-            placing your sensor in the same general area with similar sun
-            exposure.</li>
-          <li>Compare multiple sensors in the same location.</li>
-          <li>Plot comparisons and sample data showing the final systematic
-            uncertainties.</li>
-        </ul>
-      </div>
-
-      <button class="collapsible">Air Quality calibration and systematic
-        uncertainties:</button>
-      <div class="ccontent">
-        <ul>
-          <li>Compare with near-by <a href="https://www.purpleair.com/map#14/37.86891/-122.26851">PurpleAir</a>
-            stations (must convert to AQI first).</li>
-          <li>Compare data from multiple sensors in the same location.</li>
-          <li>Plot comparisons and sample data showing the final systematic
-            uncertainties.</li>
-        </ul>
-      </div>
-
-      <button class="collapsible">Graphical User Interface (GUI) for
-        data control and display:</button>
-      <div class="ccontent">
-        <ul>
-          <li>Create a GUI for showing current readings for each sensor on the
-            device.</li>
-          <li>Get data from sensors using the rabbitmq</li>
-          <li>Include the ability to switch between sensors and turn on/off data
-            logging</li>
-          <li>Show the location, etc. For example, always show some types of
-            data in smaller font and selected data in large font in the center
-            of the screen.</li>
-        </ul>
-      </div>
-
-      <button class="collapsible">PCB design for circuit board connecting
-        sensors to the RPi GPIO pins:</button>
-      <div class="ccontent">
-        <ul>
-          <li>Using <a href="https://www.autodesk.com/products/eagle/overview">Eagle</a>,
-            which you can download for free through campus by creating an
-            Autodesk account using your Berkeley credentials.
-          <li>We have a <a href="https://github.com/bearing/dosenet-print/tree/master/PCB_Hat">library</a>
-            of basic elements to get you started.</li>
-          <li>You will be expected to modify/improve/personalize the design for
-            credit, we will help you order the board from a printing service
-            once you are ready.</li>
-        </ul>
-      </div>
-
-      <button class="collapsible">3D case design:</button>
-      <div class="ccontent">
-        <ul>
-          <li>Using <a href="https://www.autodesk.com/products/inventor/overview#">Autodesk Inventor</a>
-            is recommended, although this software only runs on the Windows 64-
-            bit OS. There are alternatives, including open source options like
-            Blender, but Inventor is the most intuitive. We will have a laptop
-            with Inventor installed available if needed.</li>
-          <li>Design an enclosure for your Raspberry Pi system, including
-            screen, circuit board, and any sensors or other components you want
-            housed inside the enclosure. We have example case designs in our
-            <a href="https://github.com/bearing/dosenet-print">print design git
-              repo</a>.</li>
-          <li>Your design should be, at the very least, a modification/
-            improvement/personalization of an existing design to receive
-            credit. Prints can be done through Jacobs Hall, there is a training
-            you will need to complete to get access to those printers.</li>
         </ul>
       </div>
 
