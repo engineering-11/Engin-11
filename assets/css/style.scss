@@ -3,3 +3,35 @@
 
 @import "{{ site.theme }}";
 
+#mcontent {
+  width: 90%;
+}
+
+.empty {
+  border-style: solid;
+  border-color: transparent;
+  width: 90%;
+  border-width: 2px 2px 13px 2px;
+}
+
+p.sub {
+  width: 90%;
+}
+
+li.thick {
+  font-weight: bold;
+}
+
+#syllabus {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+#syllabus th,
+#syllabus td {
+  padding: 4px 8px;
+  vertical-align: top;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
